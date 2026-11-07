@@ -15,105 +15,127 @@
             --muted: #a1a1aa;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--primary); color: var(--text); line-height: 1.6; }
+        body { background-color: var(--primary); color: var(--text); line-height: 1.6; padding-top: 80px; }
         
         /* Header & Logo */
-        header { background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #27272a; display: flex; justify-content: space-between; align-items: center; }
+        header { background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(10px); padding: 15px 5%; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; border-bottom: 1px solid #27272a; display: flex; justify-content: space-between; align-items: center; }
         .logo-container { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 50px; width: auto; object-fit: contain; }
-        .logo-text { font-size: 20px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
-        .logo-text span { color: var(--accent); }
         
         nav { display: flex; align-items: center; gap: 25px; }
         nav a { color: var(--text); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: 0.3s; }
         nav a:hover { color: var(--accent); }
         .login-btn { background: var(--accent); padding: 10px 20px; border-radius: 4px; color: #fff !important; font-weight: 700; box-shadow: 0 0 15px var(--accent-glow); }
-        .login-btn:hover { background: #b55fe6; }
 
         /* Hero */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; background: linear-gradient(rgba(10,10,12,0.5), rgba(10,10,12,0.95)), url('https://unsplash.com') no-repeat center center/cover; position: relative; border-bottom: 1px solid #27272a; }
-        .hero-badge { font-size: 14px; color: var(--accent); font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; border: 1px solid var(--accent); padding: 6px 16px; border-radius: 50px; background: rgba(168, 85, 247, 0.05); }
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; background: linear-gradient(rgba(10,10,12,0.6), rgba(10,10,12,0.95)), url('https://unsplash.com') no-repeat center center/cover; }
         .hero h1 { font-size: 56px; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
         .hero p { font-size: 18px; margin-bottom: 35px; max-width: 650px; color: var(--muted); }
         .cta-group { display: flex; gap: 20px; }
-        .cta-primary { background: var(--accent); color: white; padding: 16px 36px; text-decoration: none; font-weight: 700; text-transform: uppercase; border-radius: 4px; font-size: 15px; letter-spacing: 1px; transition: 0.3s; box-shadow: 0 4px 20px var(--accent-glow); }
-        .cta-primary:hover { background: #b55fe6; transform: translateY(-2px); }
-        .cta-secondary { background: transparent; color: white; padding: 16px 36px; text-decoration: none; font-weight: 700; text-transform: uppercase; border-radius: 4px; font-size: 15px; letter-spacing: 1px; border: 1px solid #3f3f46; transition: 0.3s; }
-        .cta-secondary:hover { border-color: var(--accent); background: rgba(168, 85, 247, 0.05); }
+        .cta-primary { background: var(--accent); color: white; padding: 16px 36px; text-decoration: none; font-weight: 700; text-transform: uppercase; border-radius: 4px; font-size: 15px; transition: 0.3s; box-shadow: 0 4px 20px var(--accent-glow); }
+        .cta-primary:hover { background: #b55fe6; }
+        .cta-secondary { background: transparent; color: white; padding: 16px 36px; text-decoration: none; font-weight: 700; text-transform: uppercase; border-radius: 4px; font-size: 15px; border: 1px solid #3f3f46; transition: 0.3s; }
+        .cta-secondary:hover { border-color: var(--accent); }
 
         /* Sections */
-        .section { padding: 100px 5%; max-width: 1300px; margin: 0 auto; }
+        .section { padding: 90px 5%; max-width: 1200px; margin: 0 auto; }
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-tag { color: var(--accent); font-weight: 700; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        .section-title { font-size: 38px; text-transform: uppercase; font-weight: 900; letter-spacing: -0.5px; }
+        .section-title { font-size: 38px; text-transform: uppercase; font-weight: 900; }
         
-        /* Split Highlight Layout */
-        .founder-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; background: var(--surface); padding: 50px; border-radius: 12px; border: 1px solid #27272a; margin-bottom: 60px; }
-        .founder-img-box { background: #27272a; border-radius: 8px; overflow: hidden; border: 1px solid var(--accent); box-shadow: 0 0 25px rgba(168, 85, 247, 0.1); }
-        .founder-img { width: 100%; height: auto; display: block; filter: grayscale(20%); }
+        /* Founder Layout */
+        .founder-split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; background: var(--surface); padding: 50px; border-radius: 12px; border: 1px solid #27272a; }
+        .founder-img-box { background: #27272a; border-radius: 8px; overflow: hidden; border: 1px solid var(--accent); }
+        .founder-img { width: 100%; height: auto; display: block; }
         .founder-info h3 { font-size: 28px; text-transform: uppercase; margin-bottom: 5px; font-weight: 900; }
-        .founder-title { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; display: block; margin-bottom: 20px; letter-spacing: 1px; }
-        .founder-info p { color: var(--muted); margin-bottom: 20px; font-size: 16px; }
+        .founder-title { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; display: block; margin-bottom: 20px; }
+        .founder-info p { color: var(--muted); margin-bottom: 20px; }
 
-        /* Program Cards */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-        .card { background: var(--surface); padding: 35px; border-radius: 8px; border: 1px solid #27272a; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
-        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); transform: scaleY(0); transition: 0.3s; transform-origin: bottom; }
-        .card:hover { border-color: #3f3f46; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .card:hover::before { transform: scaleY(1); }
-        .card h3 { font-size: 20px; text-transform: uppercase; font-weight: 800; margin-bottom: 15px; letter-spacing: 0.5px; }
-        .card p { color: var(--muted); font-size: 14px; }
+        /* Grid Frameworks */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--surface); padding: 35px; border-radius: 8px; border: 1px solid #27272a; transition: 0.3s; position: relative; }
+        .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+        .card h3 { font-size: 20px; text-transform: uppercase; font-weight: 800; margin-bottom: 15px; color: #fff; }
+        .card h3 span { color: var(--accent); }
+        .card p { color: var(--muted); font-size: 14px; margin-bottom: 15px; }
+
+        /* Pillar Numbering */
+        .pillar-num { font-size: 48px; font-weight: 900; color: rgba(168, 85, 247, 0.15); position: absolute; top: 15px; right: 25px; }
 
         /* Affiliation Banner */
-        .parisi-section { background: radial-gradient(circle at top right, rgba(168,85,247,0.15), transparent), var(--surface); border: 1px solid var(--accent); padding: 60px; border-radius: 12px; margin-top: 80px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
-        .parisi-badge { background: #fff; color: #000; font-weight: 900; padding: 6px 12px; font-size: 12px; text-transform: uppercase; border-radius: 4px; display: inline-block; margin-bottom: 15px; }
-        .parisi-content h3 { font-size: 32px; text-transform: uppercase; font-weight: 900; margin-bottom: 15px; }
-        .parisi-content p { color: var(--muted); margin-bottom: 20px; }
-        .parisi-details { background: rgba(0,0,0,0.3); padding: 25px; border-radius: 6px; border-left: 3px solid var(--accent); }
+        .parisi-section { background: linear-gradient(135deg, rgba(168,85,247,0.1), transparent), var(--surface); border: 1px solid var(--accent); padding: 50px; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .parisi-content h3 { font-size: 30px; text-transform: uppercase; font-weight: 900; margin-bottom: 15px; }
+        .parisi-content p { color: var(--muted); }
+        .parisi-details { background: rgba(0,0,0,0.4); padding: 25px; border-radius: 6px; border-left: 4px solid var(--accent); }
         .parisi-details h4 { text-transform: uppercase; font-size: 14px; margin-bottom: 8px; color: var(--accent); }
-        .parisi-details p { font-size: 13px; color: #d4d4d8; margin: 0; }
+        .parisi-details p { font-size: 13px; color: #d4d4d8; }
 
         /* Modal Overlay */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 5, 6, 0.95); z-index: 2000; justify-content: center; align-items: center; backdrop-filter: blur(8px); }
-        .modal-content { background: var(--surface); padding: 40px; border-radius: 12px; max-width: 500px; width: 90%; text-align: center; border: 1px solid var(--accent); box-shadow: 0 0 40px rgba(168, 85, 247, 0.2); position: relative; }
-        .modal h2 { font-size: 26px; text-transform: uppercase; font-weight: 900; margin-bottom: 15px; letter-spacing: -0.5px; }
-        .modal p { color: var(--muted); margin-bottom: 30px; font-size: 15px; }
-        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; color: var(--muted); cursor: pointer; transition: 0.2s; }
-        .close-btn:hover { color: #fff; }
+        .modal-content { background: var(--surface); padding: 40px; border-radius: 12px; max-width: 500px; width: 90%; text-align: center; border: 1px solid var(--accent); position: relative; }
+        .modal h2 { font-size: 26px; text-transform: uppercase; font-weight: 900; margin-bottom: 15px; }
+        .modal p { color: var(--muted); margin-bottom: 30px; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; color: var(--muted); cursor: pointer; }
 
         footer { background: #050506; border-top: 1px solid #18181b; padding: 60px 5% 40px; text-align: center; color: var(--muted); }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; text-align: left; }
-        .footer-col h4 { color: #fff; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; letter-spacing: 1px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto 40px; text-align: left; }
+        .footer-col h4 { color: #fff; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; }
         .footer-col p, .footer-col a { color: var(--muted); font-size: 14px; text-decoration: none; display: block; margin-bottom: 10px; }
         .footer-col a:hover { color: var(--accent); }
         .footer-bottom { border-top: 1px solid #18181b; padding-top: 30px; font-size: 12px; }
 
-        @media (max-width: 968px) { .founder-split, .parisi-section { grid-template-columns: 1fr; gap: 30px; padding: 30px; } .hero h1 { font-size: 40px; } nav { display: none; } }
+        @media (max-width: 768px) { .founder-split, .parisi-section { grid-template-columns: 1fr; gap: 30px; padding: 30px; } .hero h1 { font-size: 36px; } nav { display: none; } }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <!-- Pulling your exact custom arch logo asset from live system context -->
-            <img src="https://g2fitness.org" alt="G2 Fitness Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('alt-logo').style.display='block';">
-            <div id="alt-logo" class="logo-text" style="display:none;">G2<span>FITNESS</span></div>
+            <img src="https://g2fitness.org" alt="G2 Fitness Logo" class="logo-img">
         </div>
         <nav>
             <a href="#about">About</a>
             <a href="#memberships">Memberships</a>
             <a href="#programs">Athletic Programs</a>
-            <a href="#parisi">Parisi Speed School</a>
+            <a href="#foundations">Foundations</a>
             <a href="javascript:void(0)" class="login-btn" onclick="openModal()">Member Login</a>
         </nav>
     </header>
 
     <section class="hero">
-        <span class="hero-badge">Athens, GA</span>
         <h1>YOUR GYM. YOUR G2.<br>YOUR DEVELOPMENT.</h1>
-        <p>Offering 24/7 controlled gym access alongside world-class engineered athletic training structures built for sustainable long-term capability.</p>
+        <p>Regular gym memberships alongside performance-driven athletic training blueprints engineered to construct reliable long-term operational capability in Athens, GA.</p>
         <div class="cta-group">
             <a href="#memberships" class="cta-primary">Explore Memberships</a>
+            <a href="#programs" class="cta-secondary">Athletic Offerings</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="founder-split">
+            <div class="founder-img-box">
+                <img src="https://unsplash.com" alt="Trevon Allen" class="founder-img">
+            </div>
+            <div class="founder-info">
+                <span class="section-tag">The G2 Standard</span>
+                <h3>Meet Trevon Allen</h3>
+                <span class="founder-title">Owner, Founder & Performance Coach</span>
+                <p>Trevon Allen is a veteran and an elite strength and speed architect. His approach blends technical field accuracy with persistent structural accountability to construct physical capability in adults and young athletes alike.</p>
+                <p>Development. Progression. Longevity. That clear, uncompromised priority governs everything built within our walls.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="memberships" class="section" style="border-top: 1px solid #18181b;">
+        <div class="section-header">
+            <span class="section-tag">Access Architecture</span>
+            <h2 class="section-title">Memberships & Options</h2>
+        </div>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Gym Memberships</h3>
+
 
     </script>
 </body>
