@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2 Fitness | Gym Memberships & Athletic Training</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --accent: #ff5e00; /* Custom G2 Athletic Orange */
+            --light: #f8f9fa;
+            --dark: #121212;
+            --text: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', 'Helvetica Neue', sans-serif; }
+        body { background-color: var(--dark); color: var(--text); line-height: 1.6; }
+        header { background: rgba(0,0,0,0.9); padding: 20px; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid var(--accent); display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; color: var(--text); }
+        .logo span { color: var(--accent); }
+        nav a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 600; text-transform: uppercase; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .login-btn { background: var(--accent); padding: 8px 16px; border-radius: 4px; color: black !important; font-weight: 700; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://unsplash.com') no-repeat center center/cover; }
+        .hero h1 { font-size: 64px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; margin-bottom: 30px; max-width: 600px; color: #ccc; }
+        .cta-btn { background: var(--accent); color: black; padding: 15px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; border-radius: 5px; font-size: 18px; transition: 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); }
+        .section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 36px; text-transform: uppercase; margin-bottom: 50px; font-weight: 800; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--accent); margin: 10px auto 0; }
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .program-card { background: #1c1c1c; padding: 4px; border-radius: 8px; border: 1px solid #333; overflow: hidden; transition: 0.3s; }
+        .program-card:hover { border-color: var(--accent); }
+        .program-content { padding: 25px; }
+        .program-card h3 { font-size: 22px; text-transform: uppercase; margin-bottom: 15px; color: var(--accent); }
+        .program-card p { color: #aaa; margin-bottom: 20px; }
+        .parisi-banner { background: linear-gradient(135deg, #111, #222); padding: 50px; border-radius: 12px; border-left: 5px solid var(--accent); margin-top: 60px; text-align: center; }
+        .parisi-banner h3 { font-size: 28px; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
+        .parisi-banner p { max-width: 800px; margin: 0 auto; color: #bbb; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center; }
+        .modal-content { background: #1e1e1e; padding: 4px; border-radius: 10px; max-width: 450px; width: 90%; text-align: center; border: 2px solid var(--accent); position: relative; animation: fadeIn 0.3s ease; }
+        .modal-inner { padding: 40px 30px; }
+        .modal h2 { font-size: 28px; text-transform: uppercase; margin-bottom: 15px; color: var(--accent); }
+        .modal p { color: #ccc; margin-bottom: 25px; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 30px; color: #fff; cursor: pointer; }
+        footer { background: #0a0a0a; text-align: center; padding: 40px 20px; color: #666; font-size: 14px; border-top: 1px solid #222; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) { .hero h1 { font-size: 40px; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">G2<span>FITNESS</span></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#memberships">Memberships</a>
+            <a href="javascript:void(0)" class="login-btn" onclick="openModal()">Member Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Gym Memberships &<br>Athletic Training</h1>
+        <p>Elevate your athletic performance and reach your ultimate fitness goals with elite coaching right here at G2 Fitness.</p>
+        <a href="#memberships" class="cta-btn">View Memberships</a>
+    </section>
+
+    <section id="programs" class="section">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-content">
+                    <h3>Basic Strength</h3>
+                    <p>Build a rock-solid foundation. Master structural compound lifts, core stability, identity mechanics, and functional fitness patterns designed for longevity.</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-content">
+                    <h3>Total Performance</h3>
+                    <p>For the dedicated athlete. Focus on explosive power generation, agility, multi-directional speed profiling, and intensive sports conditioning layout configurations.</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-content">
+                    <h3>Elite Sports Performance</h3>
+                    <p>Advanced individualized protocols for high-level competitors looking to maximize recruitment, velocity metrics, and customized performance longevity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="parisi-banner">
+            <h3>Parisi Speed School Affiliate</h3>
+            <p>We are a proud affiliate of the world-renowned Parisi Speed School. Delivering industry-certified training methodologies to optimize sprinting mechanics, acceleration, and injury prevention metrics for youth and teen athletes.</p>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-inner">
+                <h2>G2 App Coming Soon</h2>
+                <p>We are currently migrating away from CoachIQ to a fully custom, branded member ecosystem featuring integrated Avigilon smart access keys.</p>
+                <button class="cta-btn" style="padding: 10px 30px; font-size: 16px;" onclick="closeModal()">Got It</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 G2 Fitness. All rights reserved. Independence Managed via Claude AI.</p>
+    </footer>
+
+    <script>
+        function openModal() { document.getElementById('loginModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('loginModal').style.display = 'none'; }
+        window.onclick = function(event) {
+            let modal = document.getElementById('loginModal');
+            if (event.target == modal) { modal.style.display = 'none'; }
+        }
+    </script>
+</body>
+</html>
